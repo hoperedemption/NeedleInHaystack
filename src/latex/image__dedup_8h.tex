@@ -1,0 +1,55 @@
+\doxysection{image\+\_\+dedup.\+h File Reference}
+\hypertarget{image__dedup_8h}{}\label{image__dedup_8h}\index{image\_dedup.h@{image\_dedup.h}}
+
+
+Image deduplication.  
+
+
+{\ttfamily \#include \"{}imgfs.\+h\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for image\+\_\+dedup.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{image__dedup_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{image__dedup_8h_a292c512ffa7409a06e97370702296f1c}{do\+\_\+name\+\_\+and\+\_\+content\+\_\+dedup}} (struct \mbox{\hyperlink{structimgfs__file}{imgfs\+\_\+file}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structimgfs__file}{imgfs\+\_\+file}}, uint32\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Does image deduplication. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Image deduplication. 
+
+All functions to avoid duplication of images content in a img\+FS.
+
+\begin{DoxyAuthor}{Author}
+Mia Primorac 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{image__dedup_8h_a292c512ffa7409a06e97370702296f1c}\label{image__dedup_8h_a292c512ffa7409a06e97370702296f1c} 
+\index{image\_dedup.h@{image\_dedup.h}!do\_name\_and\_content\_dedup@{do\_name\_and\_content\_dedup}}
+\index{do\_name\_and\_content\_dedup@{do\_name\_and\_content\_dedup}!image\_dedup.h@{image\_dedup.h}}
+\doxysubsubsection{\texorpdfstring{do\_name\_and\_content\_dedup()}{do\_name\_and\_content\_dedup()}}
+{\footnotesize\ttfamily int do\+\_\+name\+\_\+and\+\_\+content\+\_\+dedup (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structimgfs__file}{imgfs\+\_\+file}} \texorpdfstring{$\ast$}{*}}]{imgfs\+\_\+file,  }\item[{uint32\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Does image deduplication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structimgfs__file}{imgfs\+\_\+file}} & The main in-\/memory structure \\
+\hline
+{\em index} & The order number in the metadata array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Some error code. 0 if no error. 
+\end{DoxyReturn}

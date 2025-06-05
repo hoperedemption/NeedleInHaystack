@@ -1,0 +1,40 @@
+\doxysection{socket\+\_\+layer.\+h File Reference}
+\hypertarget{socket__layer_8h}{}\label{socket__layer_8h}\index{socket\_layer.h@{socket\_layer.h}}
+
+
+Minimal socket layer.  
+
+
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+Include dependency graph for socket\+\_\+layer.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{socket__layer_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{socket__layer_8h_ae6dcb7474c9492bf1797f84ca989f9b1}\label{socket__layer_8h_ae6dcb7474c9492bf1797f84ca989f9b1} 
+int {\bfseries tcp\+\_\+server\+\_\+init} (uint16\+\_\+t port)
+\item 
+\Hypertarget{socket__layer_8h_a182b4e19ef679736e0510d5a286509d5}\label{socket__layer_8h_a182b4e19ef679736e0510d5a286509d5} 
+int {\bfseries tcp\+\_\+accept} (int passive\+\_\+socket)
+\begin{DoxyCompactList}\small\item\em Blocking call that accepts a new TCP connection. \end{DoxyCompactList}\item 
+\Hypertarget{socket__layer_8h_a0a1ea416436b2f6eea8a52185a5e9b97}\label{socket__layer_8h_a0a1ea416436b2f6eea8a52185a5e9b97} 
+ssize\+\_\+t {\bfseries tcp\+\_\+read} (int active\+\_\+socket, char \texorpdfstring{$\ast$}{*}buf, size\+\_\+t buflen)
+\begin{DoxyCompactList}\small\item\em Blocking call that reads the active socket once and stores the output in buf. \end{DoxyCompactList}\item 
+\Hypertarget{socket__layer_8h_ad29d81e53e562ca11ffbb77dbe66babc}\label{socket__layer_8h_ad29d81e53e562ca11ffbb77dbe66babc} 
+ssize\+\_\+t {\bfseries tcp\+\_\+send} (int active\+\_\+socket, const char \texorpdfstring{$\ast$}{*}response, size\+\_\+t response\+\_\+len)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Minimal socket layer. 
+
+\begin{DoxyAuthor}{Author}
+Konstantinos Prasopoulos 
+\end{DoxyAuthor}

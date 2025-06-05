@@ -1,0 +1,52 @@
+\doxysection{imgfscmd.\+c File Reference}
+\hypertarget{imgfscmd_8c}{}\label{imgfscmd_8c}\index{imgfscmd.c@{imgfscmd.c}}
+
+
+img\+FS command line interpreter for img\+FS core commands.  
+
+
+{\ttfamily \#include \"{}imgfs.\+h\"{}}\newline
+{\ttfamily \#include \"{}imgfscmd\+\_\+functions.\+h\"{}}\newline
+{\ttfamily \#include \"{}util.\+h\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for imgfscmd.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgfscmd_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcommand__mapping}{command\+\_\+mapping}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{imgfscmd_8c_a9b2ed3a266295f9210a80490556765f0}\label{imgfscmd_8c_a9b2ed3a266295f9210a80490556765f0} 
+\#define {\bfseries NB\+\_\+\+COMMANDS}~5
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{imgfscmd_8c_a95709ccf5ee12fe6d36ee3c994235d80}\label{imgfscmd_8c_a95709ccf5ee12fe6d36ee3c994235d80} 
+typedef int(\texorpdfstring{$\ast$}{*} {\bfseries command}) (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{imgfscmd_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{imgfscmd_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int {\bfseries main} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+img\+FS command line interpreter for img\+FS core commands. 
+
+Image Filesystem Command Line Tool
+
+\begin{DoxyAuthor}{Author}
+Mia Primorac 
+\end{DoxyAuthor}

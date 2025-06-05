@@ -1,0 +1,131 @@
+\doxysection{error.\+h File Reference}
+\hypertarget{error_8h}{}\label{error_8h}\index{error.h@{error.h}}
+
+
+error codes  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+Include dependency graph for error.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{error_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{error_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{error_8h_aff0d3fb76f11f6e8ea4002d826bbd23c}{ERR\+\_\+\+NONE}}~0
+\begin{DoxyCompactList}\small\item\em internal error codes. \end{DoxyCompactList}\item 
+\Hypertarget{error_8h_af343b20373ba49a92fce523e948f2ab3}\label{error_8h_af343b20373ba49a92fce523e948f2ab3} 
+\#define {\bfseries ASSERT}~assert
+\item 
+\Hypertarget{error_8h_ad4d0181076bcf51c58cf91540abac61e}\label{error_8h_ad4d0181076bcf51c58cf91540abac61e} 
+\#define {\bfseries debug\+\_\+printf}(fmt, ...)~    do \{\} while(0)
+\item 
+\#define \mbox{\hyperlink{error_8h_a4844a3230620ca133e511ff9de77f452}{M\+\_\+\+REQUIRE\+\_\+\+NON\+\_\+\+NULL}}(arg)
+\item 
+\Hypertarget{error_8h_a9bdefffecbc94407d2bd73982a32dd08}\label{error_8h_a9bdefffecbc94407d2bd73982a32dd08} 
+\#define {\bfseries pps\+\_\+printf}~printf
+\item 
+\Hypertarget{error_8h_a66466516a4a71f3c78ccc40d203c92e5}\label{error_8h_a66466516a4a71f3c78ccc40d203c92e5} 
+\#define {\bfseries ERR\+\_\+\+MSG}(err)~(ERR\+\_\+\+FIRST $<$ (err) \&\& (err) $<$ ERR\+\_\+\+LAST ? \mbox{\hyperlink{error_8c_ab32e44b131cc0439431081f6e955894e}{ERR\+\_\+\+MESSAGES}}\mbox{[}(err) -\/ ERR\+\_\+\+FIRST\mbox{]} \+: \"{}Invalid error code\"{})
+\begin{DoxyCompactList}\small\item\em yields the error message corresponding to an error code \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{error_8h_abfd51332ef0e0ba71f951a69e68e06be}\label{error_8h_abfd51332ef0e0ba71f951a69e68e06be} 
+enum {\bfseries error\+\_\+codes} \{ \newline
+{\bfseries ERR\+\_\+\+FIRST} = -\/128
+, {\bfseries ERR\+\_\+\+IO}
+, {\bfseries ERR\+\_\+\+RUNTIME}
+, {\bfseries ERR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY}
+, \newline
+{\bfseries ERR\+\_\+\+NOT\+\_\+\+ENOUGH\+\_\+\+ARGUMENTS}
+, {\bfseries ERR\+\_\+\+INVALID\+\_\+\+FILENAME}
+, {\bfseries ERR\+\_\+\+INVALID\+\_\+\+COMMAND}
+, {\bfseries ERR\+\_\+\+INVALID\+\_\+\+ARGUMENT}
+, \newline
+{\bfseries ERR\+\_\+\+THREADING}
+, {\bfseries ERR\+\_\+\+MAX\+\_\+\+FILES}
+, {\bfseries ERR\+\_\+\+RESOLUTIONS}
+, {\bfseries ERR\+\_\+\+INVALID\+\_\+\+IMGID}
+, \newline
+{\bfseries ERR\+\_\+\+IMGFS\+\_\+\+FULL}
+, {\bfseries ERR\+\_\+\+IMAGE\+\_\+\+NOT\+\_\+\+FOUND}
+, {\bfseries NOT\+\_\+\+IMPLEMENTED}
+, {\bfseries ERR\+\_\+\+DUPLICATE\+\_\+\+ID}
+, \newline
+{\bfseries ERR\+\_\+\+IMGLIB}
+, {\bfseries ERR\+\_\+\+DEBUG}
+, {\bfseries ERR\+\_\+\+LAST}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*}const \mbox{\hyperlink{error_8h_ab32e44b131cc0439431081f6e955894e}{ERR\+\_\+\+MESSAGES}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em filesystem internal error messages. Defined in \doxylink{error_8c}{error.\+c}. Should be accessed using {\ttfamily ERR\+\_\+\+MSG} (see below) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+error codes 
+
+\begin{DoxyAuthor}{Author}
+Edouard Bugnion 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+summer 2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{error_8h_aff0d3fb76f11f6e8ea4002d826bbd23c}\label{error_8h_aff0d3fb76f11f6e8ea4002d826bbd23c} 
+\index{error.h@{error.h}!ERR\_NONE@{ERR\_NONE}}
+\index{ERR\_NONE@{ERR\_NONE}!error.h@{error.h}}
+\doxysubsubsection{\texorpdfstring{ERR\_NONE}{ERR\_NONE}}
+{\footnotesize\ttfamily \#define ERR\+\_\+\+NONE~0}
+
+
+
+internal error codes. 
+
+\Hypertarget{error_8h_a4844a3230620ca133e511ff9de77f452}\label{error_8h_a4844a3230620ca133e511ff9de77f452} 
+\index{error.h@{error.h}!M\_REQUIRE\_NON\_NULL@{M\_REQUIRE\_NON\_NULL}}
+\index{M\_REQUIRE\_NON\_NULL@{M\_REQUIRE\_NON\_NULL}!error.h@{error.h}}
+\doxysubsubsection{\texorpdfstring{M\_REQUIRE\_NON\_NULL}{M\_REQUIRE\_NON\_NULL}}
+{\footnotesize\ttfamily \#define M\+\_\+\+REQUIRE\+\_\+\+NON\+\_\+\+NULL(\begin{DoxyParamCaption}\item[{}]{arg }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{do}\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (arg\ ==\ NULL)\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ debug\_printf(\textcolor{stringliteral}{"{}ERROR:\ parameter\ \%s\ is\ NULL\ when\ calling\ \ \%s()\ (defined\ in\ \%s)\(\backslash\)n"{}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#arg,\ \_\_func\_\_,\ \_\_FILE\_\_);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ERR\_INVALID\_ARGUMENT;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{error_8h_ab32e44b131cc0439431081f6e955894e}\label{error_8h_ab32e44b131cc0439431081f6e955894e} 
+\index{error.h@{error.h}!ERR\_MESSAGES@{ERR\_MESSAGES}}
+\index{ERR\_MESSAGES@{ERR\_MESSAGES}!error.h@{error.h}}
+\doxysubsubsection{\texorpdfstring{ERR\_MESSAGES}{ERR\_MESSAGES}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} const ERR\+\_\+\+MESSAGES\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+filesystem internal error messages. Defined in \doxylink{error_8c}{error.\+c}. Should be accessed using {\ttfamily ERR\+\_\+\+MSG} (see below) 
+

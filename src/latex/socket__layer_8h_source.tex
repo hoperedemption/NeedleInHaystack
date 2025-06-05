@@ -1,0 +1,19 @@
+\doxysection{socket\+\_\+layer.\+h}
+\hypertarget{socket__layer_8h_source}{}\label{socket__layer_8h_source}\mbox{\hyperlink{socket__layer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <stddef.h>}\ \textcolor{comment}{//\ size\_t}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdint.h>}\ \textcolor{comment}{//\ uint16\_t}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <sys/types.h>}\ \textcolor{comment}{//\ ssize\_t}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{int}\ tcp\_server\_init(uint16\_t\ port);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{socket__layer_8h_a182b4e19ef679736e0510d5a286509d5}{tcp\_accept}}(\textcolor{keywordtype}{int}\ passive\_socket);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ ssize\_t\ \mbox{\hyperlink{socket__layer_8h_a0a1ea416436b2f6eea8a52185a5e9b97}{tcp\_read}}(\textcolor{keywordtype}{int}\ active\_socket,\ \textcolor{keywordtype}{char}*\ buf,\ \textcolor{keywordtype}{size\_t}\ buflen);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ ssize\_t\ tcp\_send(\textcolor{keywordtype}{int}\ active\_socket,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ response,\ \textcolor{keywordtype}{size\_t}\ response\_len);}
+
+\end{DoxyCode}

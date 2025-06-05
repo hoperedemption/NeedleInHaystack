@@ -1,0 +1,79 @@
+\doxysection{imgfs\+\_\+header Struct Reference}
+\hypertarget{structimgfs__header}{}\label{structimgfs__header}\index{imgfs\_header@{imgfs\_header}}
+
+
+The header with the configuration data \+: name, version, number of saved files, maximal number of files, the array of all the resolutions and the unsued space (in 32 and 64 bits).  
+
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structimgfs__header_a6c498aca3ee275614eb6928661a2e709}{name}} \mbox{[}MAX\+\_\+\+IMGFS\+\_\+\+NAME+1\mbox{]}
+\item 
+unsigned int \mbox{\hyperlink{structimgfs__header_a14a0eb410f2ad0c41685c9440639241d}{version}}
+\item 
+unsigned int \mbox{\hyperlink{structimgfs__header_af89037a23442a7aa078bae288bc2f244}{nb\+\_\+files}}
+\item 
+unsigned int \mbox{\hyperlink{structimgfs__header_aebc404807f47d4d5dd74235b4a1c7c88}{max\+\_\+files}}
+\item 
+unsigned short int \mbox{\hyperlink{structimgfs__header_acb4b7642afba19e037ef1cab69c5a4eb}{resized\+\_\+res}} \mbox{[}2 \texorpdfstring{$\ast$}{*}(NB\+\_\+\+RES -\/ 1)\mbox{]}
+\item 
+unsigned int \mbox{\hyperlink{structimgfs__header_a1f32bea12b7a6be52780953eed40f75c}{unused\+\_\+32}}
+\item 
+unsigned long int \mbox{\hyperlink{structimgfs__header_ad0724e5acf2b58a6847e8217fcb15f64}{unused\+\_\+64}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The header with the configuration data \+: name, version, number of saved files, maximal number of files, the array of all the resolutions and the unsued space (in 32 and 64 bits). 
+
+of the image filesystem 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structimgfs__header_aebc404807f47d4d5dd74235b4a1c7c88}\label{structimgfs__header_aebc404807f47d4d5dd74235b4a1c7c88} 
+\index{imgfs\_header@{imgfs\_header}!max\_files@{max\_files}}
+\index{max\_files@{max\_files}!imgfs\_header@{imgfs\_header}}
+\doxysubsubsection{\texorpdfstring{max\_files}{max\_files}}
+{\footnotesize\ttfamily unsigned int imgfs\+\_\+header\+::max\+\_\+files}
+
+The number of maximum files that the filesystem can store \Hypertarget{structimgfs__header_a6c498aca3ee275614eb6928661a2e709}\label{structimgfs__header_a6c498aca3ee275614eb6928661a2e709} 
+\index{imgfs\_header@{imgfs\_header}!name@{name}}
+\index{name@{name}!imgfs\_header@{imgfs\_header}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily char imgfs\+\_\+header\+::name\mbox{[}MAX\+\_\+\+IMGFS\+\_\+\+NAME+1\mbox{]}}
+
+A string of at most MAX\+\_\+\+IMGFS\+\_\+\+NAME characters, the name of database \Hypertarget{structimgfs__header_af89037a23442a7aa078bae288bc2f244}\label{structimgfs__header_af89037a23442a7aa078bae288bc2f244} 
+\index{imgfs\_header@{imgfs\_header}!nb\_files@{nb\_files}}
+\index{nb\_files@{nb\_files}!imgfs\_header@{imgfs\_header}}
+\doxysubsubsection{\texorpdfstring{nb\_files}{nb\_files}}
+{\footnotesize\ttfamily unsigned int imgfs\+\_\+header\+::nb\+\_\+files}
+
+The number of files in the filesystem \Hypertarget{structimgfs__header_acb4b7642afba19e037ef1cab69c5a4eb}\label{structimgfs__header_acb4b7642afba19e037ef1cab69c5a4eb} 
+\index{imgfs\_header@{imgfs\_header}!resized\_res@{resized\_res}}
+\index{resized\_res@{resized\_res}!imgfs\_header@{imgfs\_header}}
+\doxysubsubsection{\texorpdfstring{resized\_res}{resized\_res}}
+{\footnotesize\ttfamily unsigned short int imgfs\+\_\+header\+::resized\+\_\+res\mbox{[}2 \texorpdfstring{$\ast$}{*}(NB\+\_\+\+RES -\/ 1)\mbox{]}}
+
+The array containing all the resolutions of the thumbnail and the small image resolution stored in the following order \+: thumbnail width, thumbnail height, small width, small height \Hypertarget{structimgfs__header_a1f32bea12b7a6be52780953eed40f75c}\label{structimgfs__header_a1f32bea12b7a6be52780953eed40f75c} 
+\index{imgfs\_header@{imgfs\_header}!unused\_32@{unused\_32}}
+\index{unused\_32@{unused\_32}!imgfs\_header@{imgfs\_header}}
+\doxysubsubsection{\texorpdfstring{unused\_32}{unused\_32}}
+{\footnotesize\ttfamily unsigned int imgfs\+\_\+header\+::unused\+\_\+32}
+
+Unused variable stored on 32 bits (intended for future evolution) \Hypertarget{structimgfs__header_ad0724e5acf2b58a6847e8217fcb15f64}\label{structimgfs__header_ad0724e5acf2b58a6847e8217fcb15f64} 
+\index{imgfs\_header@{imgfs\_header}!unused\_64@{unused\_64}}
+\index{unused\_64@{unused\_64}!imgfs\_header@{imgfs\_header}}
+\doxysubsubsection{\texorpdfstring{unused\_64}{unused\_64}}
+{\footnotesize\ttfamily unsigned long int imgfs\+\_\+header\+::unused\+\_\+64}
+
+Unused variable, stored on 64 bit (intended for future evolutions) \Hypertarget{structimgfs__header_a14a0eb410f2ad0c41685c9440639241d}\label{structimgfs__header_a14a0eb410f2ad0c41685c9440639241d} 
+\index{imgfs\_header@{imgfs\_header}!version@{version}}
+\index{version@{version}!imgfs\_header@{imgfs\_header}}
+\doxysubsubsection{\texorpdfstring{version}{version}}
+{\footnotesize\ttfamily unsigned int imgfs\+\_\+header\+::version}
+
+The current version of the iamge file system 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgfs_8h}{imgfs.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,44 @@
+\doxysection{imgfs\+\_\+server\+\_\+service.\+h File Reference}
+\hypertarget{imgfs__server__service_8h}{}\label{imgfs__server__service_8h}\index{imgfs\_server\_service.h@{imgfs\_server\_service.h}}
+
+
+Service layer to connect imgfs\+\_\+server and img\+FS backend.  
+
+
+{\ttfamily \#include \"{}http\+\_\+prot.\+h\"{}}\newline
+Include dependency graph for imgfs\+\_\+server\+\_\+service.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{imgfs__server__service_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{imgfs__server__service_8h_af320d624694385c982343a9f2d2b1ef5}\label{imgfs__server__service_8h_af320d624694385c982343a9f2d2b1ef5} 
+\#define {\bfseries BASE\+\_\+\+FILE}~\"{}index.\+html\"{}
+\item 
+\Hypertarget{imgfs__server__service_8h_abfcdb1becb6170a9ddc3b4e7090169e1}\label{imgfs__server__service_8h_abfcdb1becb6170a9ddc3b4e7090169e1} 
+\#define {\bfseries DEFAULT\+\_\+\+LISTENING\+\_\+\+PORT}~8000
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{imgfs__server__service_8h_a3f924c483947c4b2731752b535524968}\label{imgfs__server__service_8h_a3f924c483947c4b2731752b535524968} 
+int {\bfseries server\+\_\+startup} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\item 
+\Hypertarget{imgfs__server__service_8h_aae94553179ea7a08a7291c2b91bc3002}\label{imgfs__server__service_8h_aae94553179ea7a08a7291c2b91bc3002} 
+void {\bfseries server\+\_\+shutdown} (void)
+\item 
+\Hypertarget{imgfs__server__service_8h_a9693b18869f65ef37ffce9a0102e91a7}\label{imgfs__server__service_8h_a9693b18869f65ef37ffce9a0102e91a7} 
+int {\bfseries handle\+\_\+http\+\_\+message} (struct \mbox{\hyperlink{structhttp__message}{http\+\_\+message}} \texorpdfstring{$\ast$}{*}msg, int connection)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service layer to connect imgfs\+\_\+server and img\+FS backend. 
+
+\begin{DoxyAuthor}{Author}
+Konstantinos Prasopoulos 
+\end{DoxyAuthor}

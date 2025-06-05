@@ -1,0 +1,79 @@
+\doxysection{image\+\_\+content.\+h File Reference}
+\hypertarget{image__content_8h}{}\label{image__content_8h}\index{image\_content.h@{image\_content.h}}
+
+
+Image content manipulation functions.  
+
+
+{\ttfamily \#include \"{}imgfs.\+h\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for image\+\_\+content.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{image__content_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{image__content_8h_a1304792caddef3ace77629bd7304efca}{get\+\_\+resolution}} (uint32\+\_\+t \texorpdfstring{$\ast$}{*}height, uint32\+\_\+t \texorpdfstring{$\ast$}{*}width, const char \texorpdfstring{$\ast$}{*}image\+\_\+buffer, size\+\_\+t image\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Gets the resolution of an image. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{image__content_8h_a3db20051913249183806393cc5662510}{lazily\+\_\+resize}} (int resolution, struct \mbox{\hyperlink{structimgfs__file}{imgfs\+\_\+file}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structimgfs__file}{imgfs\+\_\+file}}, size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Calls the create\+\_\+resized\+\_\+img function and updates the metadata on the disk. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Image content manipulation functions. 
+
+\begin{DoxyAuthor}{Author}
+Mia Primorac 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{image__content_8h_a1304792caddef3ace77629bd7304efca}\label{image__content_8h_a1304792caddef3ace77629bd7304efca} 
+\index{image\_content.h@{image\_content.h}!get\_resolution@{get\_resolution}}
+\index{get\_resolution@{get\_resolution}!image\_content.h@{image\_content.h}}
+\doxysubsubsection{\texorpdfstring{get\_resolution()}{get\_resolution()}}
+{\footnotesize\ttfamily int get\+\_\+resolution (\begin{DoxyParamCaption}\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{height,  }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{width,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{image\+\_\+buffer,  }\item[{size\+\_\+t}]{image\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Gets the resolution of an image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & Where to put the calculated image height. \\
+\hline
+{\em width} & Where to put the calculated image width. \\
+\hline
+{\em filename} & The image file name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Some error code. 0 if no error. 
+\end{DoxyReturn}
+\Hypertarget{image__content_8h_a3db20051913249183806393cc5662510}\label{image__content_8h_a3db20051913249183806393cc5662510} 
+\index{image\_content.h@{image\_content.h}!lazily\_resize@{lazily\_resize}}
+\index{lazily\_resize@{lazily\_resize}!image\_content.h@{image\_content.h}}
+\doxysubsubsection{\texorpdfstring{lazily\_resize()}{lazily\_resize()}}
+{\footnotesize\ttfamily int lazily\+\_\+resize (\begin{DoxyParamCaption}\item[{int}]{resolution,  }\item[{struct \mbox{\hyperlink{structimgfs__file}{imgfs\+\_\+file}} \texorpdfstring{$\ast$}{*}}]{imgfs\+\_\+file,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Calls the create\+\_\+resized\+\_\+img function and updates the metadata on the disk. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resolution} & \\
+\hline
+{\em \doxylink{structimgfs__file}{imgfs\+\_\+file}} & The main in-\/memory structure \\
+\hline
+{\em index} & The index of the image in the metadata array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Some error code. 0 if no error. 
+\end{DoxyReturn}

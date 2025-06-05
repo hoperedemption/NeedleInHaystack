@@ -1,0 +1,144 @@
+\doxysection{util.\+h File Reference}
+\hypertarget{util_8h}{}\label{util_8h}\index{util.h@{util.h}}
+
+
+Tool macros and functions.  
+
+
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for util.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{util_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{util_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{util_8h_ab795c7ed25edebadeccc5ecf535c2563}\label{util_8h_ab795c7ed25edebadeccc5ecf535c2563} 
+\#define {\bfseries \+\_\+unused}~\+\_\+\+\_\+attribute\+\_\+\+\_\+((unused))
+\begin{DoxyCompactList}\small\item\em tag a variable as POTENTIALLY unused, to avoid compiler warnings \end{DoxyCompactList}\item 
+\Hypertarget{util_8h_a426af52f8b37d7efd46d0a4da3ea0dde}\label{util_8h_a426af52f8b37d7efd46d0a4da3ea0dde} 
+\#define {\bfseries TO\+\_\+\+BE\+\_\+\+IMPLEMENTED}()~    do \{ fprintf(stderr, \"{}TO\+\_\+\+BE\+\_\+\+IMPLEMENTED!\textbackslash{}n\"{}); assert(0); \} while (0)
+\begin{DoxyCompactList}\small\item\em useful for partial implementation \end{DoxyCompactList}\item 
+\Hypertarget{util_8h_a827ff2924cd56d8a373832be9d927215}\label{util_8h_a827ff2924cd56d8a373832be9d927215} 
+\#define {\bfseries free\+\_\+const\+\_\+ptr}(X)~free((void \texorpdfstring{$\ast$}{*}) X)
+\begin{DoxyCompactList}\small\item\em useful to free pointers to const without warning. Use with care! \end{DoxyCompactList}\item 
+\Hypertarget{util_8h_aabb7cb51c3a45dfa4f6ad2a5729f0c46}\label{util_8h_aabb7cb51c3a45dfa4f6ad2a5729f0c46} 
+\#define {\bfseries SIZE\+\_\+\+T\+\_\+\+FMT}~\"{}\%zu\"{}
+\begin{DoxyCompactList}\small\item\em useful to have C99 (!) zu to compile in Windows \end{DoxyCompactList}\item 
+\Hypertarget{util_8h_a18d295a837ac71add5578860b55e5502}\label{util_8h_a18d295a837ac71add5578860b55e5502} 
+\#define {\bfseries STR}(x)~\#x
+\begin{DoxyCompactList}\small\item\em useful to specify a length defined by a macro for format strings \end{DoxyCompactList}\item 
+\Hypertarget{util_8h_ab32716e336023640ec5f7d4ddbad156a}\label{util_8h_ab32716e336023640ec5f7d4ddbad156a} 
+\#define {\bfseries STR\+\_\+\+LENGTH\+\_\+\+FMT}(x)~\"{}\%.\"{} \mbox{\hyperlink{util_8h_a18d295a837ac71add5578860b55e5502}{STR}}(x) \"{}s\"{}
+\item 
+\Hypertarget{util_8h_a3acffbd305ee72dcd4593c0d8af64a4f}\label{util_8h_a3acffbd305ee72dcd4593c0d8af64a4f} 
+\#define {\bfseries MIN}(a,  b)~((a) $<$ (b) ? (a) \+: (b))
+\begin{DoxyCompactList}\small\item\em usual macro for min() and max() functions \end{DoxyCompactList}\item 
+\Hypertarget{util_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}\label{util_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f} 
+\#define {\bfseries MAX}(a,  b)~((a) $>$ (b) ? (a) \+: (b))
+\item 
+\Hypertarget{util_8h_a29fbaba6e429ca623625a00c68bafa3d}\label{util_8h_a29fbaba6e429ca623625a00c68bafa3d} 
+\#define {\bfseries COALESCE}(a,  b)~(((a) == 0) ? (b) \+: (a))
+\begin{DoxyCompactList}\small\item\em returns the first non null value \end{DoxyCompactList}\item 
+\Hypertarget{util_8h_ac728a34787951006cba3e1be64ad54f7}\label{util_8h_ac728a34787951006cba3e1be64ad54f7} 
+\#define {\bfseries zero\+\_\+init\+\_\+var}(X)~memset(\&X, 0, sizeof(X))
+\begin{DoxyCompactList}\small\item\em useful to init a variable (typically a struct) directly or through a pointer \end{DoxyCompactList}\item 
+\Hypertarget{util_8h_a195360d09cd5b1ad4838cf12fb7245c7}\label{util_8h_a195360d09cd5b1ad4838cf12fb7245c7} 
+\#define {\bfseries zero\+\_\+init\+\_\+ptr}(X)~memset(X, 0, sizeof(\texorpdfstring{$\ast$}{*}X))
+\item 
+\Hypertarget{util_8h_a951eee1d327ac9fae4c4ac35c7a05fa2}\label{util_8h_a951eee1d327ac9fae4c4ac35c7a05fa2} 
+\#define {\bfseries print\+\_\+error}()~  do \{ \} while (0)
+\begin{DoxyCompactList}\small\item\em prints the description of the last error from the std library, preceded by the file and line number \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{util_8h_a472d1947a14aca9ba7e28591f7fcb4d4}{atouint16}} (const char \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em String to uint16\+\_\+t conversion function. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{util_8h_a60bfacc4459c4e2a83034a19b940db73}{atouint32}} (const char \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em String to uint32\+\_\+t conversion function. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{util_8h_a358c578ef0c4c99cbe0641404142d953}{strnstr}} (const char \texorpdfstring{$\ast$}{*}str, const char \texorpdfstring{$\ast$}{*}find, size\+\_\+t slen)
+\begin{DoxyCompactList}\small\item\em Find the first occurrence of find in s, where the search is limited to the first slen characters of s. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tool macros and functions. 
+
+\begin{DoxyAuthor}{Author}
+Jean-\/\+Cédric Chappelier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017-\/2024 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{util_8h_a472d1947a14aca9ba7e28591f7fcb4d4}\label{util_8h_a472d1947a14aca9ba7e28591f7fcb4d4} 
+\index{util.h@{util.h}!atouint16@{atouint16}}
+\index{atouint16@{atouint16}!util.h@{util.h}}
+\doxysubsubsection{\texorpdfstring{atouint16()}{atouint16()}}
+{\footnotesize\ttfamily uint16\+\_\+t atouint16 (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str }\end{DoxyParamCaption})}
+
+
+
+String to uint16\+\_\+t conversion function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & a string containing some integer value to be extracted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+converted value in uint16\+\_\+t format 
+\end{DoxyReturn}
+\Hypertarget{util_8h_a60bfacc4459c4e2a83034a19b940db73}\label{util_8h_a60bfacc4459c4e2a83034a19b940db73} 
+\index{util.h@{util.h}!atouint32@{atouint32}}
+\index{atouint32@{atouint32}!util.h@{util.h}}
+\doxysubsubsection{\texorpdfstring{atouint32()}{atouint32()}}
+{\footnotesize\ttfamily uint32\+\_\+t atouint32 (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str }\end{DoxyParamCaption})}
+
+
+
+String to uint32\+\_\+t conversion function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & a string containing some integer value to be extracted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+converted value in uint32\+\_\+t format 
+\end{DoxyReturn}
+\Hypertarget{util_8h_a358c578ef0c4c99cbe0641404142d953}\label{util_8h_a358c578ef0c4c99cbe0641404142d953} 
+\index{util.h@{util.h}!strnstr@{strnstr}}
+\index{strnstr@{strnstr}!util.h@{util.h}}
+\doxysubsubsection{\texorpdfstring{strnstr()}{strnstr()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} strnstr (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{find,  }\item[{size\+\_\+t}]{slen }\end{DoxyParamCaption})}
+
+
+
+Find the first occurrence of find in s, where the search is limited to the first slen characters of s. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & a string to search into \\
+\hline
+{\em find} & the string searched for \\
+\hline
+{\em slen} & the max search length \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+first occurrence of find in str or NULL 
+\end{DoxyReturn}
